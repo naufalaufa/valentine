@@ -19,7 +19,9 @@ const App = () => {
   ]);
   return (
     <>
-      <RouterProvider router={router} />
+      <div className="bg-gradient-to-r from-pink-400 to-pink-700">
+        <RouterProvider router={router} />
+      </div>
       <Footer />
     </>
   );

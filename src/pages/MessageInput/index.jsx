@@ -4,6 +4,7 @@ import { useState } from "react";
 import { MdOutlineWavingHand } from "react-icons/md";
 import ValentineUndraw from "../../assets/images/undraw-valentine.png";
 import { BsFillHandIndexThumbFill } from "react-icons/bs";
+import { useNavigate } from "react-router-dom";
 
 const MessageInput = () => {
   const [isModalOpen, setIsModalOpen] = useState(false);
@@ -11,12 +12,20 @@ const MessageInput = () => {
     setIsModalOpen(true);
   };
 
+  const navigate = useNavigate();
+
   const handleOk = () => {
     setIsModalOpen(false);
   };
 
   const handleCancel = () => {
     setIsModalOpen(false);
+  };
+
+  const handleBack = () => {
+    Cookies.remove("firstname");
+    Cookies.remove("lastname");
+    navigate("/");
   };
 
   const firstname = Cookies.get("firstname");
@@ -57,18 +66,26 @@ const MessageInput = () => {
             berharga dalam kebersamaan, Di dalam cinta, kita temukan keajaiban.
           </p>
         </Modal>
-        <Button
-          className="mt-3 text-white bg-pink-500 shadow-md shadow-slate-700"
-          onClick={showModal}
-        >
-          <div className="flex items-center justify-evenly">
-            <p>PENCET DONG !</p>
+        <div className="flex items-center gap-5">
+          <Button
+            onClick={handleBack}
+            className="mt-3 bg-red-600 text-white shadow-md shadow-slate-700"
+          >
+            Back
+          </Button>
+          <Button
+            className="mt-3 text-white bg-pink-500 shadow-md shadow-slate-700"
+            onClick={showModal}
+          >
+            <div className="flex items-center justify-evenly">
+              <p>PENCET DONG !</p>
 
-            <span>
-              <BsFillHandIndexThumbFill size={20} />
-            </span>
-          </div>
-        </Button>
+              <span>
+                <BsFillHandIndexThumbFill size={20} />
+              </span>
+            </div>
+          </Button>
+        </div>
       </div>
     </>
   );
