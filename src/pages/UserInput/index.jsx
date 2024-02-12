@@ -48,7 +48,7 @@ const UserInput = () => {
             marginBottom: "15px",
           }}
         >
-          <Typography.Title level={3}>Masukin namanya dong</Typography.Title>
+          <Typography.Title level={3}>Masukin nama lo dong</Typography.Title>
           <Form.Item
             name="firstname"
             rules={[

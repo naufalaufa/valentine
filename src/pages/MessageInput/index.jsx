@@ -3,6 +3,7 @@ import Cookies from "js-cookie";
 import { useState } from "react";
 import { MdOutlineWavingHand } from "react-icons/md";
 import ValentineUndraw from "../../assets/images/undraw-valentine.png";
+import { BsFillHandIndexThumbFill } from "react-icons/bs";
 
 const MessageInput = () => {
   const [isModalOpen, setIsModalOpen] = useState(false);
@@ -60,7 +61,13 @@ const MessageInput = () => {
           className="mt-3 text-white bg-pink-500 shadow-md shadow-slate-700"
           onClick={showModal}
         >
-          PENCET DONG !
+          <div className="flex items-center justify-evenly">
+            <p>PENCET DONG !</p>
+
+            <span>
+              <BsFillHandIndexThumbFill size={20} />
+            </span>
+          </div>
         </Button>
       </div>
     </>
