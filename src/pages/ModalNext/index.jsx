@@ -23,7 +23,7 @@ const ModalNext = () => {
 
   const onFinish = (values) => {
     if (values.number === "14") {
-      message.success("Happy valentine");
+      message.success("Happy valentine ❤️💕");
       navigate("/endPage");
     } else {
       message.error("Jawaban mu kurang tepat");

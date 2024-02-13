@@ -4,7 +4,7 @@ import { Button } from "antd";
 import { useNavigate } from "react-router-dom";
 import { IoMdArrowBack } from "react-icons/io";
 import { FaHeart } from "react-icons/fa";
-
+import AudioFile from "../../assets/audio/music-1.mp4";
 const EndPage = () => {
   const firstname = Cookies.get("firstname");
   const lastname = Cookies.get("lastname");
@@ -33,10 +33,12 @@ const EndPage = () => {
           />
         </span>
       </h1>
+
       <p className="text-xs">Selamat tanggal 14</p>
       <p className="text-xs mt-1">
         Selamat hari valentine , selamat hari kasih sayang
       </p>
+      <audio controls autoPlay src={AudioFile} className="opacity-0" />
       <Button
         onClick={handleCancel}
         className="mt-10 bg-pink-800 text-white font-bold w-[50%] flex items-center justify-evenly"
