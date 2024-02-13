@@ -4,6 +4,7 @@ import { Button } from "antd";
 import { useNavigate } from "react-router-dom";
 import { IoMdArrowBack } from "react-icons/io";
 import { FaHeart } from "react-icons/fa";
+import { MdNavigateNext } from "react-icons/md";
 import AudioFile from "../../../public/musicFolder/y2mate.com - Cant Help Falling In Love  Elvis Presley  Lyrics video dan terjemahan  Alexandra Porat Cover.mp3";
 const EndPage = () => {
   const firstname = Cookies.get("firstname");
@@ -47,15 +48,28 @@ const EndPage = () => {
         Selamat hari valentine , selamat hari kasih sayang
       </p>
       <audio controls autoPlay src={AudioFile} className="opacity-0" />
-      <Button
-        onClick={handleCancel}
-        className="mt-10 bg-pink-800 text-white font-bold w-[50%] flex items-center justify-evenly"
-      >
-        <p>Back</p>
-        <span>
-          <IoMdArrowBack />
-        </span>
-      </Button>
+      <div className="flex items-center justify-between">
+        <Button
+          onClick={handleCancel}
+          className="mt-10 bg-pink-800 text-white font-bold w-[50%] flex items-center justify-evenly"
+        >
+          <p>Back</p>
+          <span>
+            <IoMdArrowBack />
+          </span>
+        </Button>
+        <Button
+          onClick={() => {
+            navigate("/finalPage");
+          }}
+          className="mt-10 bg-blue-600 text-white flex items-center gap-3"
+        >
+          <p>Next</p>
+          <span>
+            <MdNavigateNext />
+          </span>
+        </Button>
+      </div>
     </div>
   );
 };

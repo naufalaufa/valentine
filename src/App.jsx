@@ -5,6 +5,9 @@ import {
   MessageInput,
   ModalNext,
   EndPage,
+  FinalPage,
+  MessagePeople,
+  Ending,
 } from "./pages";
 import Footer from "./components/Footer";
 import Aos from "aos";
@@ -34,6 +37,24 @@ const App = () => {
       path: "/endPage",
       name: "endPage",
       element: <EndPage />,
+      errorElement: <ErrorPages />,
+    },
+    {
+      path: "/finalPage",
+      name: "finalPage",
+      element: <FinalPage />,
+      errorElement: <ErrorPages />,
+    },
+    {
+      path: "/messagePeople",
+      name: "messagePeople",
+      element: <MessagePeople />,
+      errorElement: <ErrorPages />,
+    },
+    {
+      path: "/ending",
+      name: "ending",
+      element: <Ending />,
       errorElement: <ErrorPages />,
     },
   ]);
