@@ -1,10 +1,11 @@
-import { Button, Modal } from "antd";
+import { Button, Modal, message } from "antd";
 import Cookies from "js-cookie";
 import { useState } from "react";
 import { MdOutlineWavingHand } from "react-icons/md";
 import ValentineUndraw from "../../assets/images/undraw-valentine.png";
 import { BsFillHandIndexThumbFill } from "react-icons/bs";
 import { useNavigate } from "react-router-dom";
+import { FaSmileBeam } from "react-icons/fa";
 
 const MessageInput = () => {
   const [isModalOpen, setIsModalOpen] = useState(false);
@@ -30,6 +31,9 @@ const MessageInput = () => {
 
   const firstname = Cookies.get("firstname");
   const lastname = Cookies.get("lastname");
+  const image = Cookies.get("image");
+
+  console.log({ image });
 
   console.log(lastname);
   console.log(firstname);
@@ -37,7 +41,10 @@ const MessageInput = () => {
   return (
     <>
       <div className="grid min-h-screen place-content-center">
-        <div className="p-4 bg-pink-800 rounded-e-xl rounded-b-xl">
+        <div className="p-4 bg-pink-800 rounded-e-xl rounded-b-xl relative">
+          <span className="absolute top-[-20px] left-[-5px]">
+            <FaSmileBeam size={35} className="text-yellow-200" />
+          </span>
           <h2 className="text-white">
             Hello{" "}
             <div className="flex items-center gap-3">
@@ -54,16 +61,23 @@ const MessageInput = () => {
           onCancel={handleCancel}
           footer={
             <div className="flex justify-between">
-              <Button onClick={handleCancel}>Cancel</Button>
-              <Button>Next</Button>
+              <Button onClick={() => message.info("Why not? 😞")}>No</Button>
+              <Button
+                onClick={() => {
+                  message.success("YEAY!!!");
+                  navigate("/nextInput");
+                }}
+              >
+                Yes
+              </Button>
             </div>
           }
         >
           <img src={ValentineUndraw} alt={ValentineUndraw} />
-          <p>
-            <span className="font-bold">Valentine</span>, sebuah cerita yang
-            terpahat, Di dalam benak kita, abadi terkenang, Setiap detik
-            berharga dalam kebersamaan, Di dalam cinta, kita temukan keajaiban.
+
+          <p className="whitespace-nowrap text-xs">
+            Hello {`${firstname}  ${lastname}`} will you be my{" "}
+            <span className="font-bold">Valentine ?</span>
           </p>
         </Modal>
         <div className="flex items-center gap-5">

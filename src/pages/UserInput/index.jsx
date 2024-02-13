@@ -1,4 +1,4 @@
-import { Button, Form, Input, Typography } from "antd";
+import { Button, Form, Input, Typography, Upload, message } from "antd";
 import Cookies from "js-cookie";
 import { useNavigate } from "react-router-dom";
 import { FaHandHoldingHeart } from "react-icons/fa6";
@@ -13,6 +13,7 @@ const UserInput = () => {
     Cookies.set("firstname", values.firstname);
     Cookies.set("lastname", values.lastname);
     navigate("/messageInput");
+    message.success(`Hello ${values.firstname} ${values.lastname}`);
   };
 
   return (
@@ -71,6 +72,7 @@ const UserInput = () => {
           >
             <Input placeholder="Your last name" />
           </Form.Item>
+
           <div>
             <img
               src={LogoValentine1}
