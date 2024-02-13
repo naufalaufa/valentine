@@ -7,7 +7,7 @@ const Footer = () => {
           textAlign: "center",
         }}
       >
-        Kenny Kotambunan
+        Your lovely boyfriend
       </p>
     </div>
   );
