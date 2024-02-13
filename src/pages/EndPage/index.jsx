@@ -4,7 +4,7 @@ import { Button } from "antd";
 import { useNavigate } from "react-router-dom";
 import { IoMdArrowBack } from "react-icons/io";
 import { FaHeart } from "react-icons/fa";
-import AudioFile from "../../assets/audio/music-1.mp4";
+import AudioFile from "../../../public/musicFolder/y2mate.com - Cant Help Falling In Love  Elvis Presley  Lyrics video dan terjemahan  Alexandra Porat Cover.mp3";
 const EndPage = () => {
   const firstname = Cookies.get("firstname");
   const lastname = Cookies.get("lastname");
@@ -18,8 +18,14 @@ const EndPage = () => {
 
   return (
     <div className="min-h-screen grid place-content-center text-white">
-      <h1 className="relative text-2xl">
-        <span className="text-6xl font-bold text-white ">H</span>appy Valentine
+      <h1
+        data-aos="fade-zoom-in"
+        data-aos-offset="200"
+        data-aos-delay="200"
+        className="relative text-2xl"
+      >
+        <span className="text-6xl font-bold text-white ">H</span>
+        appy Valentine
         <p className="rounded-e-lg rounded-se-sm bg-pink-300 p-2 my-4 text-white text-md relative">{`${firstname} ${lastname}`}</p>
         <img
           src={MessageImage}
@@ -34,8 +40,10 @@ const EndPage = () => {
         </span>
       </h1>
 
-      <p className="text-xs">Selamat tanggal 14</p>
-      <p className="text-xs mt-1">
+      <p data-aos="fade-zoom-in" data-aos-delay="200" className="text-xs">
+        Selamat tanggal 14
+      </p>
+      <p data-aos="fade-zoom-in" data-aos-delay="200" className="text-xs mt-1">
         Selamat hari valentine , selamat hari kasih sayang
       </p>
       <audio controls autoPlay src={AudioFile} className="opacity-0" />

@@ -7,6 +7,8 @@ import {
   EndPage,
 } from "./pages";
 import Footer from "./components/Footer";
+import Aos from "aos";
+import "aos/dist/aos.css";
 
 const App = () => {
   const router = createBrowserRouter([
@@ -35,6 +37,8 @@ const App = () => {
       errorElement: <ErrorPages />,
     },
   ]);
+
+  Aos.init();
   return (
     <>
       <div className="bg-gradient-to-r from-pink-400 to-pink-700">
