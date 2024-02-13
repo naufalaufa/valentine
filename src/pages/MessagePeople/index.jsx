@@ -1,4 +1,4 @@
-import { Button, Form, Input } from "antd";
+import { Button, Form, Input, message } from "antd";
 import Cookies from "js-cookie";
 import AudioFile from "../../../public/musicFolder/y2mate.com - Cant Help Falling In Love  Elvis Presley  Lyrics video dan terjemahan  Alexandra Porat Cover.mp3";
 import { useNavigate } from "react-router-dom";
@@ -8,6 +8,7 @@ const MessagePeople = () => {
   const yourName = Cookies.get("yourName");
   const onFinish = (values) => {
     Cookies.set("message", values.message);
+    message.success("Happy valentine days!!!");
     navigate("/ending");
   };
   return (
