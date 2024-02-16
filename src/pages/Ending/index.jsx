@@ -2,12 +2,17 @@ import Cookies from "js-cookie";
 import AudioFile from "../../../public/musicFolder/y2mate.com - Cant Help Falling In Love  Elvis Presley  Lyrics video dan terjemahan  Alexandra Porat Cover.mp3";
 import { TypeAnimation } from "react-type-animation";
 import Message2 from "../../assets/images/message-2.png";
+import { Button } from "antd";
+import { useNavigate } from "react-router-dom";
 
 const Ending = () => {
   const message = Cookies.get("message");
   const yourName = Cookies.get("yourName");
   const firstname = Cookies.get("firstname");
   const lastname = Cookies.get("lastname");
+
+  const navigate = useNavigate();
+
   return (
     <>
       <div className="min-h-screen grid place-content-center">
@@ -37,6 +42,12 @@ const Ending = () => {
             />
           </p>
         </div>
+        <Button
+          onClick={() => navigate("/messageForKenny")}
+          className="bg-blue-500 text-white"
+        >
+          Next
+        </Button>
       </div>
 
       <audio src={AudioFile} controls autoPlay className="opacity-0" />

@@ -6,3 +6,4 @@ export { default as EndPage } from "./EndPage";
 export { default as FinalPage } from "./FinalPage";
 export { default as MessagePeople } from "./MessagePeople";
 export { default as Ending } from "./Ending";
+export { default as MessageForKenny } from "./MessageForKenny";

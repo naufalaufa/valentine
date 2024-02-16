@@ -8,6 +8,7 @@ import {
   FinalPage,
   MessagePeople,
   Ending,
+  MessageForKenny,
 } from "./pages";
 import Footer from "./components/Footer";
 import Aos from "aos";
@@ -55,6 +56,12 @@ const App = () => {
       path: "/ending",
       name: "ending",
       element: <Ending />,
+      errorElement: <ErrorPages />,
+    },
+    {
+      path: "/messageForKenny",
+      name: "messageForKenny",
+      element: <MessageForKenny />,
       errorElement: <ErrorPages />,
     },
   ]);
