@@ -2,8 +2,8 @@ import { Button, Form, Input, Modal, message } from "antd";
 import Cookies from "js-cookie";
 import { useState } from "react";
 import { LuMailQuestion } from "react-icons/lu";
-import confused from "../../assets/images/confused.jpg";
 import { useNavigate } from "react-router-dom";
+import kennyImage2 from "../../assets/images/kenny-4.png";
 
 const ModalNext = () => {
   const firstname = Cookies.get("firstname");
@@ -48,7 +48,7 @@ const ModalNext = () => {
           </span>
         </Button>
         <Modal open={isModalOpen} onCancel={handleCancel} onOk={onOk} footer="">
-          <img src={confused} alt={confused} />
+          <img src={kennyImage2} alt={kennyImage2} />
           <p className="text-2xl font-bold my-3">10 + 4 = ?</p>
           <Form onFinish={onFinish}>
             <Form.Item name="number">

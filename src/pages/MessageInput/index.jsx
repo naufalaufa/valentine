@@ -2,10 +2,11 @@ import { Button, Modal, message } from "antd";
 import Cookies from "js-cookie";
 import { useState } from "react";
 import { MdOutlineWavingHand } from "react-icons/md";
-import ValentineUndraw from "../../assets/images/undraw-valentine.png";
+// import ValentineUndraw from "../../assets/images/undraw-valentine.png";
 import { BsFillHandIndexThumbFill } from "react-icons/bs";
 import { useNavigate } from "react-router-dom";
 import { FaSmileBeam } from "react-icons/fa";
+import Kenny1 from "../../assets/images/kenny-2.png";
 
 const MessageInput = () => {
   const [isModalOpen, setIsModalOpen] = useState(false);
@@ -73,7 +74,7 @@ const MessageInput = () => {
             </div>
           }
         >
-          <img src={ValentineUndraw} alt={ValentineUndraw} />
+          <img src={Kenny1} alt={Kenny1} />
 
           <p className="whitespace-nowrap text-xs">
             Hello {`${firstname}  ${lastname}`} will you be my{" "}

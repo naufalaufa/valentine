@@ -1,4 +1,4 @@
-import { Button, Form, Input, Typography, Upload, message } from "antd";
+import { Button, Form, Input, Typography, message } from "antd";
 import Cookies from "js-cookie";
 import { useNavigate } from "react-router-dom";
 import { FaHandHoldingHeart } from "react-icons/fa6";
